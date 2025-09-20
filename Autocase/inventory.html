@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory - AutoCase Showroom</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+      color: white;
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .glow-hover:hover {
+      box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.7);
+      transform: translateY(-3px);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="fixed w-full z-20 glass">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <a href="index.html" class="text-2xl font-bold text-yellow-400">NextGear Motors</a>
+      <ul class="hidden md:flex space-x-8 font-medium">
+        <li><a href="index.html" class="hover:text-yellow-400 transition">Home</a></li>
+        <li class="relative group">
+          <a href="inventory.html" class="hover:text-yellow-400 transition">Inventory </a>
+          <ul class="absolute left-0 hidden group-hover:block glass mt-2 rounded-lg text-white">
+            <li><a href="about.html" class="block px-4 py-2 hover:text-yellow-400">About Us</a></li>
+            <li><a href="contact.html" class="block px-4 py-2 hover:text-yellow-400">Contact Us</a></li>
+               
+          </ul>
+        </li>
+        <li><a href="sell.html" class="hover:text-yellow-400 transition">Sell a Car</a></li>
+        <li><a href="mega.html" class="hover:text-yellow-400 transition">Mega Menu</a></li>
+        <li><a href="login.html" class="hover:text-yellow-400 transition">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="h-[70vh] flex flex-col justify-center items-center text-center px-6">
+    <h1 class="text-5xl md:text-6xl font-extrabold text-yellow-400 mb-4" data-aos="zoom-in">
+      Our Premium Inventory
+    </h1>
+    <p class="text-lg max-w-2xl text-gray-300 mb-6" data-aos="fade-up">
+      Explore a curated collection of luxury and budget-friendly cars — handpicked just for you.
+    </p>
+  </section>
+
+  <!-- Inventory Grid -->
+<!-- Inventory Grid -->
+  <section class="py-16 container mx-auto px-6">
+  <div id="carGrid" class="grid md:grid-cols-3 sm:grid-cols-2 gap-10">
+
+    <!-- Car Card -->
+    <div class="glass rounded-xl p-4 glow-hover" data-aos="fade-up">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/a0/d3/5b/a0d35b7c785789fd6fd89a923ec08493.jpg"
+             class="car-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Toyota">
+      </div>
+      <h3 class="font-bold text-xl">Toyota Corolla</h3>
+      <p class="text-gray-300">2022 • 12,000 km</p>
+    </div>
+
+    <div class="glass rounded-xl p-4 glow-hover" data-aos="fade-up" data-aos-delay="100">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/a2/00/60/a200605d160ada3d8b06ee45b56aeb37.jpg"
+             class="car-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Honda">
+      </div>
+      <h3 class="font-bold text-xl">Honda Civic</h3>
+      <p class="text-gray-300">2021 • 20,000 km</p>
+    </div>
+
+    <div class="glass rounded-xl p-4 glow-hover" data-aos="fade-up" data-aos-delay="200">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/da/d8/cf/dad8cffb097797df0ef6c6d7bdc55393.jpg"
+             class="car-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Suzuki">
+      </div>
+      <h3 class="font-bold text-xl">Suzuki Swift</h3>
+      <p class="text-gray-300">2020 • 35,000 km</p>
+    </div>
+
+    <!-- Hidden Cars -->
+    <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://images.pexels.com/photos/13990556/pexels-photo-13990556.jpeg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="BMW">
+      </div>
+      <h3 class="font-bold text-xl">BMW M3</h3>
+      <p class="text-gray-300">2022 • 5,000 km</p>
+    </div>
+
+    <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/a9/82/52/a982521804be3023aed4443bf2e2c075.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Audi">
+      </div>
+      <h3 class="font-bold text-xl">Audi A6</h3>
+      <p class="text-gray-300">2021 • 10,000 km</p>
+    </div>
+
+    <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/26/ea/1d/26ea1d41db9f2844d2db170e7b36a0f3.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Mercedes C-Class</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+     <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/736x/50/95/f0/5095f074b95f07f98a68803f34acd7fb.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Ford F150</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/736x/fc/89/b3/fc89b36ad5158e7310f2d3f96428b274.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Jaguar</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/ea/14/0f/ea140f3b57a68288ec4128338bf48025.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Porsche</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/5e/7b/b7/5e7bb794c7ec60a9c9e2e343f9a36291.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Rang Rover</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/736x/f8/be/23/f8be23c1f6bce1390058471d29d04e8c.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Mercedes S-Class</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/ad/cc/31/adcc314adf6287e32d8ecb0f8b8ec9a8.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Toyota Crown</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/736x/c7/44/f3/c744f329829515dc7bca1067b53a9d02.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Tesla Cyber Truck</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/5d/93/ef/5d93efd21bb768722428d505ead89794.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Cadillac</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/aa/11/5a/aa115a55f0511ddba38aef9dac055530.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Ford Mustang </h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/736x/d2/8f/4f/d28f4f22f341048e4268e2426dfbe003.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Lamborghini</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/736x/4c/87/d2/4c87d2856b571be187286f073ccf84ad.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Chevrolet</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/e2/8b/26/e28b2608ab5a6db698251972378b70fe.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Corvette Z06</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/6e/6f/8b/6e6f8b12532d561d535a2e76c7775b27.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Acura Integra</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/736x/fc/1e/95/fc1e95107bb5f8ab623e52b43afc9379.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Lucid Air</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/72/8b/b3/728bb3dcea3533e765a24231e3d4b68f.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Hyundai Sonata N-Line</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/55/a0/9f/55a09f4db56e9b0d01d6d5fecd92ceaa.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Volkswagon</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/a7/b5/96/a7b5968271425619f07c81a5bea5681b.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Mazda Rx8</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/84/ed/31/84ed3166510a86bf27b663eb56bf108f.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Nissan Patrol</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/69/95/21/69952135782b04d2574e899dcd201c81.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Mercedes G-Class</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/28/b6/83/28b68362fda6e8b07b733774b83f9853.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Bentley</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/736x/18/42/b1/1842b1577fd7557b686974ec0ecc278c.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Kia Sportage</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/736x/33/a0/f7/33a0f7f6c24c2554aefe5653c742e474.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">GMW Haval H6</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/86/c6/84/86c68434025c48cd5115f19d64dd6503.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Subaru</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/da/ab/01/daab018316f0c8befedafeda69b02bc1.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Audi E-tron GT</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/736x/f6/f7/ac/f6f7aca6eb9c3452176ae77807040cd9.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Ferrari</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/ea/7c/c6/ea7cc67bbc79bc97413d7b75e71bdf11.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Dodge</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/e0/e8/9f/e0e89fe08ed39ee347b89bbb73565cbf.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Maserati</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/37/cd/c7/37cdc747389ce82f503dc8a3d5f707ca.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Bugatti</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/03/65/14/036514880becbb72967ff37752d97056.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Roll-Royce</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/d5/81/e9/d581e9890e6c2cd6ac8d36c4c663a276.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Aston Martin</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/736x/d9/28/b3/d928b3d35351042c1cdaa3caeab2ca80.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Mercedes S-Class</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/59/d2/ff/59d2ff18a8ab0183697debdf5ee73491.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Peugrot</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/57/1c/13/571c13f578b42feccf088e936218895b.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Daihatsu</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/d5/45/e9/d545e9de7251203870bd8dc68ffbf983.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">BYD</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/ca/1d/9b/ca1d9bd23015af14aea12352023e854b.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">MG</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/736x/62/12/d7/6212d78c695707b74174d5c52a21cd9c.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Mansory</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/20/dc/17/20dc17c4cc63d32e561ff76df3eb8eff.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Lagonda</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/1e/ff/d3/1effd39a8a2e68aaaeed4b809e87a623.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Chery</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/91/46/62/914662cf3d64159e082cc2580df4358f.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Mistubishi</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/74/c6/59/74c659a5e17320c27fe04855eb645ac1.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Polestar EV2</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/1200x/de/b4/25/deb425476516d6e2d4428028fa85a768.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">Hummer EV</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+ <div class="glass rounded-xl p-4 glow-hover hidden extra-car">
+      <div class="overflow-hidden rounded-lg">
+        <img src="https://i.pinimg.com/736x/cc/8b/0d/cc8b0d07854339ac69161eff9b61fe02.jpg"
+             class="car-img hidden-img rounded-lg mb-3 w-full h-48 object-cover"
+             alt="Mercedes">
+      </div>
+      <h3 class="font-bold text-xl">JEEP</h3>
+      <p class="text-gray-300">2020 • 18,000 km</p>
+    </div>
+
+  </div>
+
+  <!-- Show More Button -->
+  <div class="text-center mt-10">
+    <button id="showMoreBtn"
+      class="px-6 py-3 bg-yellow-400 text-black font-bold rounded-full glow-hover">
+      Show More
+    </button>
+  </div>
+</section>
+
+<!-- CSS for animation -->
+<style>
+  .hidden-img {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px); /* start slightly smaller and lower */
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); /* smooth ease-out */
+  }
+
+  .hidden-img.show {
+    opacity: 1;
+    transform: scale(1) translateY(0); /* scale up and move to original position */
+  }
+</style>
+
+
+<!-- JS -->
+<script>
+  const showmoreBtn = document.getElementById("showMoreBtn");
+  const ExtraCars = document.querySelectorAll(".extra-car");
+
+  showMoreBtn.addEventListener("click", () => {
+    extraCars.forEach((car, index) => {
+      setTimeout(() => {
+        car.classList.remove("hidden"); // reveal card
+
+        // Animate inner image like the first cards
+        const img = car.querySelector(".car-img");
+        img.classList.add("appear"); // triggers smooth fade + scale + slide
+      }, index * 250); // stagger timing for nice sequential effect
+    });
+
+    showMoreBtn.style.display = "none"; // hide button after click
+  });
+</script>
+
+
+</section>
+
+<!-- Custom CSS -->
+<style>
+  /* Initial animation when loaded */
+  .car-img {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px); /* start slightly smaller and lower */
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* smooth, bouncy easing */
+  }
+
+  .car-img.appear {
+    opacity: 1;
+    transform: scale(1) translateY(0); /* final position and scale */
+  }
+
+  /* Hover effect */
+  .car-img:hover {
+    transform: scale(1.05) translateY(-5px); /* slight lift on hover */
+    box-shadow: 0 12px 25px rgba(255, 215, 0, 0.5); /* more pronounced glow */
+    transition: all 0.3s ease-in-out;
+  }
+</style>
+
+
+<!-- JS -->
+<script>
+  const showMoreBtn = document.getElementById("showMoreBtn");
+  const extraCars = document.querySelectorAll(".extra-car");
+  const carImgs = document.querySelectorAll(".car-img");
+
+  // Animate images on initial load
+  window.addEventListener("load", () => {
+    carImgs.forEach((img, index) => {
+      setTimeout(() => img.classList.add("appear"), index * 150); // faster stagger
+    });
+  });
+
+  // Show More functionality with smooth staggered animation
+  showMoreBtn.addEventListener("click", () => {
+    extraCars.forEach((car, index) => {
+      setTimeout(() => {
+        car.classList.remove("hidden"); // reveal card
+        const img = car.querySelector(".car-img");
+
+        // Trigger animation with slight delay for premium effect
+        setTimeout(() => {
+          img.classList.add("appear");
+        }, 50); 
+      }, index * 180); // stagger timing for smooth cascade
+    });
+
+    // Hide the button after click
+    showMoreBtn.style.display = "none";
+  });
+</script>
+
+
+</section>
+
+      
+      
+  </section>
+
+  <!-- Footer -->
+  <footer class="glass py-6 text-center text-gray-400">
+    © 2025 AutoCase Showroom. All Rights Reserved.
+  </footer>
+
+  <!-- AOS Animations -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000 });</script>
+</body>
+</html>
+
